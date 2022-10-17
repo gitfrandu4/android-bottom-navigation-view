@@ -1,6 +1,8 @@
 # Bottom Navigation View
 
-https://material.io/components/bottom-navigation/android#using-bottom-navigation
+<img src="imgs/bottom-navigation.png" height="240px"/>
+
+https://material.io/components/bottom-navigation/android
 
 Otro de los componentes que vemos en muchas apps  es el de BottomNavigationView, que es como una
 barra de navegación con pestañas situada debajo de la pantalla.
