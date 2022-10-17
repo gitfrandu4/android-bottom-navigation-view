@@ -73,4 +73,40 @@ Note: BottomNavigationView does not support more than 5 menu items.
 
 Por último, faltaría cambiar el componente en la activity o fragment
 
-# android-bottom-navigation-view
+```kotlin
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        val bottom_navigation_view = findViewById<BottomNavigationView>(R.id.bottom_navigation_view)
+
+        bottom_navigation_view.setOnItemSelectedListener { menuItem ->
+            when(menuItem.itemId) {
+                R.id.action_music -> {
+                    goToFragment(MusicFragment())
+                    true
+                }
+                R.id.action_films -> {
+                    goToFragment(FilmsFragment())
+                    true
+                }
+                R.id.action_books -> {
+                    goToFragment(BooksFragment())
+                    true
+                }
+                else -> false
+            }
+        }
+        bottom_navigation_view.selectedItemId = R.id.action_music
+    }
+
+    fun goToFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction().replace(R.id.main_container, fragment).commit()
+    }
+
+    // childFragmentmanager.beginTransaction().replace(R.id.main_container, f).commit()
+    // Para implementarlo en un Fragment en lugar de en un activity
+}
+```

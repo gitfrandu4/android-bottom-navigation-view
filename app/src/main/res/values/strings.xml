@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">android-bottom-navigation-view</string>
+    <string name="books">Libros</string>
+    <string name="films">Películas</string>
+    <string name="music">Música</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="my_books">mis libros</string>
+    <string name="my_films">Mis películas</string>
+    <string name="my_music">Mi música</string>
+</resources>
